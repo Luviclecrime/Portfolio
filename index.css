@@ -1,0 +1,378 @@
+/* Mise en forme globale */
+body {
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Conteneur d'image en haut */
+.img_container {
+    padding: 30px;
+    text-align: center;
+    background-image: url('news220119-pouillot-verdatre-300.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Animation du texte sous forme de curseur clignotant */
+.img_container h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+    border-right: 3px solid #007bff;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: cursor 0.7s step(1) infinite;
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Image circulaire en haut à droite */
+.image_2 {
+    border: 0px solid rgb(164, 240, 164);
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.image_2 img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+   object-fit: cover;
+   background-color: rgb(164, 248, 164);
+   color: rgb(158, 249, 158);
+}
+
+.image_2:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Mise en forme des sections */
+.moi {
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.moi h4 {
+    color: darkblue;
+}
+
+/* Liste à puces */
+.liste {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.liste li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.liste li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: yellow;
+}
+
+/* Animation des images */
+.image {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.image.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Section Statistiques */
+.stat  {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stat h4,.moi {
+    color: darkblue;
+}
+
+/* Mise en forme des titres et paragraphes */
+h2, h3, h4 {
+    font-family: 'Arial', sans-serif;
+}
+
+h4 {
+    color: darkblue;
+}
+.progre{
+    width: 100%;
+    color:#ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 20px;
+    margin: 10px 0;
+}
+.conte{
+    height: 100%;
+    text-align: center;
+    font-weight: bold;
+    line-height: 20px;
+    transition: width 3s ease-in;
+    color:white;
+
+}
+.p2{
+    color: red;
+    width: 100px;
+    height: 3px;
+    
+}
+@media(max-width:768px){
+    .img_container{
+        padding: 15px;
+        height: auto;
+    }
+    h2,h3,h4{
+        font-size: 1.2rem;
+    }
+    .img_container h3{
+        font-size: 1rem;
+    }
+}
+.img-fluid_rounded{
+    width: 100%;
+    height: auto;
+}
+.image_text-center_my-4{
+    width: 100%;
+    height: auto;
+}
+.rien{
+    width: 100%;
+    height: 5px;
+}
+caption{
+    align-items: center;
+    text-align: center;
+    justify-self: center;
+}
+input[type="text"]{
+    width:60%;
+    height: 50%;
+    border-radius: 20px;
+    align-items: center;
+    background-color: rgb(220, 218, 218);
+    border-color:skyblue;
+    margin: 12px;
+    padding: 12px;
+}
+div[class="savoir"]{
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+div[class="contact"]{
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+textarea{
+
+    height:90px;
+    width: 60%;
+    border-radius: 5px;
+
+}
+input[type="button"]{
+    padding: 12px;
+    margin:12px ;
+    height: 40px;
+    width: 60%;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+
+}
+.nmero{
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    align-items: center;
+    display: flex;
+
+}
+h5{
+    color: blue;
+}
+/* Style de la flèche */
+.back-to-top {
+    position: fixed;
+    bottom: 20px; /* Distance du bas de l'écran */
+    right: 20px; /* Distance de la droite de l'écran */
+    font-size: 30px; /* Taille de la flèche */
+    background-color: #007bff; /* Couleur de fond */
+    color: white; /* Couleur de la flèche */
+    padding: 10px 15px; /* Espacement autour de la flèche */
+    border-radius: 50%; /* Forme ronde */
+    text-align: center;
+    display: none; /* Par défaut, elle est cachée */
+    text-decoration: none; /* Retirer la décoration du lien */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Quand la flèche est en survol */
+.back-to-top:hover {
+    background-color: #0056b3; /* Changement de couleur au survol */
+    transform: translateY(-5px); /* Légère animation au survol */
+}
+
+/* Afficher la flèche quand on défile vers le bas */
+.show {
+    display: block;
+}
+input[type="number"]{
+    width:60%;
+    height: 50%;
+    border-radius: 20px;
+    align-items: center;
+    background-color: rgb(220, 218, 218);
+    border-color:skyblue;
+    margin: 12px;
+    padding: 12px;
+}
+@keyframes shake {
+    0%,100%{
+        transform: translateX(0);
+    }
+    25%{
+        transform:translateX(-5);
+
+    }
+    75%{
+        transform: translateX(5px);
+
+    }
+}
+img.shake{
+    animation: shake 0.5s infinite;
+}
+@keyframes blink{
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+img.blink{
+    animation: blink 1s step-end infinite;
+}
+input[type="button"]:hover {
+    background-color: red;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre portée au survol */
+}
+
+.footer{
+    background-color: var(--white);
+    border-top: var(--border);
+    position: sticky;
+    bottom: 0; left: 0; right: 0;
+    text-align: center;
+    font-size: 2rem;
+    padding:2.5rem 2rem;
+    color:var(--black);
+    margin-top: 1rem;
+    z-index: 1000;
+    /* padding-bottom: 9.5rem; */
+ }
+    @keyframes swing {
+        20%{transform:rotate(15deg);}
+        40%{transform:rotate(-10deg);}
+        60%{transform:rotate(5deg);}
+    80%{transform:rotate(-5deg);}
+    100%{transform:rotate(0deg);}
+    }
+    .luvic {
+        display: inline-block;
+        position: relative; /* Pour positionner la réflexion et l'ombre */
+        transition: transform 0.5s ease;
+        animation: swing 1s ease forwards; /* Animation principale de l'image */
+        animation-delay: 0s; /* Image visible immédiatement */
+        animation-iteration-count: infinite;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Ombre douce pour un effet de flottement */
+    }
+    
+    /* Le reflet sous l'élément */
+    .luvic::after {
+        content: ''; /* Nécessaire pour créer un pseudo-élément */
+        position: absolute;
+        bottom: -10px; /* Place le reflet sous l'élément */
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.6); /* Légère couleur pour simuler l'eau ou la lumière réfléchie */
+        transform: scaleY(-1); /* Retourner le reflet verticalement */
+        opacity: 0.3; /* Légèrement translucide */
+        filter: blur(8px); /* Effet de flou pour imiter l'eau */
+        border-radius: 8px; /* Pour arrondir le reflet comme l'élément */
+        pointer-events: none; /* Pour ne pas interférer avec les interactions utilisateur */
+        animation: reflection-animation 2s ease-in-out infinite; /* Animation pour l'effet dynamique de l'eau */
+    }
+    
+    /* Animation du reflet pour simuler un effet de mouvement léger */
+    @keyframes reflection-animation {
+        0%, 100% {
+            opacity: 0.3;
+            transform: scaleY(-1) translateY(2px); /* Mouvement léger pour simuler des vagues légères */
+        }
+        50% {
+            opacity: 0.5;
+            transform: scaleY(-1) translateY(0px); /* Le reflet revient à sa position d'origine */
+        }
+    }
+    
+    
+  
+    
+    /* Animation de la réflexion */
+    @keyframes reflection-animation {
+        0% {
+            opacity: 0; /* La réflexion commence invisible */
+            transform: scaleY(-1) translateY(20px); /* Légère séparation au début */
+        }
+        100% {
+            opacity: 0.4; /* La réflexion devient visible */
+            transform: scaleY(-1) translateY(0); /* Retour à la position d'origine */
+        }
+    }
+    
